@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+.button_class {
+	float: left;
+	margin: 10px 10px;
+	border: 1px solid #696;
+	padding: 60px 0;
+	text-align: center;
+	width: 200px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-box-shadow: #666 5px 5px 5px;
+	-moz-box-shadow: #666 5px 5px 5px;
+	box-shadow: #666 5px 5px 5px;
+	background: #187D84;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#187D84), to(#EF866B) );
+	background: -webkit-linear-gradient(#187D84, #EF866B);
+	background: -moz-linear-gradient(#187D84, #EF866B);
+	background: -ms-linear-gradient(#187D84, #EF866B);
+	background: -o-linear-gradient(#187D84, #EF866B);
+	background: linear-gradient(#187D84, #EF866B);
+	-pie-background: linear-gradient(#187D84, #EF866B);
+	behavior: url(js/pie/1.0.0/PIE.htc);
+}
