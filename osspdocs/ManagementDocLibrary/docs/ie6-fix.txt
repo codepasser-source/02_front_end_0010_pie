@@ -1,0 +1,28 @@
+01	/*让position:fixed在IE6下可用!*/
+02	.fixed-top/*头部固定*/{position:fixed;bottom:auto;top:0px;}
+03	.fixed-bottom/*底部固定*/{position:fixed;bottom:0px;top:auto;}
+04	.fixed-left/*左侧固定*/{position:fixed;right:auto;left:0px;}
+05	.fixed-right/*右侧固定*/{position:fixed;right:0px;left:auto;}
+06	 
+07	/*上面的是除了IE6的主流浏览器通用的方法*/
+08	*html,*htmlbody/*修正IE6振动bug*/
+09	{background-image:url(about:blank);background-attachment:fixed;}
+10	*html.fixed-top/*IE6头部固定*/
+11	{position:absolute;bottom:auto;
+12	top:expression(eval(document.documentElement.scrollTop));}
+13	*html.fixed-right/*IE6右侧固定*/
+14	{position:absolute;right:auto;
+15	left:expression(eval(document.documentElement.scrollLeft
+16	+document.documentElement.clientWidth-this.offsetWidth)
+17	-(parseInt(this.currentStyle.marginLeft,10)||0)
+18	-(parseInt(this.currentStyle.marginRight,10)||0));}
+19	 
+20	*html.fixed-bottom/*IE6底部固定*/
+21	{position:absolute;bottom:auto;
+22	top:expression(eval(document.documentElement.scrollTop
+23	+document.documentElement.clientHeight-this.offsetHeight
+24	-(parseInt(this.currentStyle.marginTop,10)||0)
+25	-(parseInt(this.currentStyle.marginBottom,10)||0)));}
+26	*html.fixed-left/*IE6左侧固定*/
+27	{position:absolute;right:auto;
+28	left:expression(eval(document.documentElement.scrollLeft));}
